@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FRAMS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <link rel="stylesheet" href="style1.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+     
+
+
+#navbar {
+    display:flex ;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+*{
+    margin :0;
+    padding: 0;;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*css variables*/
+:root{
+    --navbar-height: 59px;
+
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;  
+    opacity: 0.6;
+}
+#logo{
+    margin: 10px 34px;
+
+}
+#logo img{
+    height:69px;
+    margin: 3px 5px;
+
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai',cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color:white;
+   display: block;
+   padding: 3px 24px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color:white;
+    
+}
+
+#home{
+    display:flex;
+    flex-direction : column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content : center;
+    align-items : center;
+}
+
+
+
+
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url("{{url_for('static',filename='bg-test6.jpg')}}") no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 1.0;
+    }
+
+    #home h1{
+        color: white;
+        text-align: center;
+        font-family: 'Bree Serif',serif;
+    }
+    #home p{
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree Serif',serif;
+ 
+	}
+	
+    .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: #0b2e13;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+	  /*contact section*/
+    #contact{
+        position: relative;
+    
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        background: url("{{url_for('static',filename='contact4.jpg')}}") no-repeat center center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem; 
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+    #contact-box form{
+        width: 40%;
+    
+    }
+    #contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif',serif;
+    }
+    button{
+        border-radius: 7px;
+        border-color: black;
+        font-size: 1.1rem;
+        font-family: 'Bree Serif',serif;
+        background-color: #9e9e9e;
+    
+    }
+    footer{
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+    
+    
+    
+    /* utility classes*/
+    
+    
+    .h-primary{
+        font-size: 3.5rem;
+        padding: 12px;
+        font-family: 'Bree Serif',serif;
+    
+    }
+    
+    .h-secondary{
+        font-size: 2.3rem;
+        padding: 12px;
+         font-family: 'Bree Serif',serif;
+    
+    }
+    .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: #0c5460;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .center{
+        text-align:center ;
+    }
+
+	
+    </style>
+  </head>
+  <body>
+ <nav id="navbar">
+    <div id="logo">
+        <img src="{{url_for('static',filename='images/key-person2.png')}}" class="rounded-circle" alt="Icon">
+    </div>
+<ul>
+    <li class="item"><a href="#home">Home</a></li>
+    <!--<li class="item"><a href="#services-container">My Portifilio </a></li> -->
+    <li class="item"><a href="#contact">Contact Us</a></li>
+    <li class="item"><a href="/how">Admin Login</a></li> 
+
+</ul>
+</nav>  
+
+<section id="home">
+<h2 class="h-primary  text-center " style="color:black;"> <strong>Face Recognition based Attendance Management System</strong></h2>
+
+ <form action="/new" method="POST">
+ <button type="submit" class="btn btn-primary btn-block btn-large mt-5">Register New Student</button>
+  </form>
+  <form action="#" method="post">
+<button type="submit" class="btn btn-primary btn-block btn-large">Punch your Attendance</button>
+ </form>
+</section>
+<section id="contact">
+    <h1 class="h-primary center"> Contact Us</h1>
+    <div id="contact-box">
+     <form action="https://formspree.io/xjvapqwa" method="POST">
+            <div class="form-group">
+                <label for="name"> Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="e-mail"> E-mail:</label>
+                <input type="text" name="name" id="e-mail" placeholder="Enter Your E-mail">
+            </div>
+            <div class="form-group">
+                <label for="name">Contact No:</label>
+                <input type="number" name="name" id="phone" placeholder=" Enter Your Contact Number">
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea name="message" id="message" cols="10" rows="5" placeholder="Your Feedback is valuable.Please write to us."></textarea>
+            </div>
+            <button type="submit" name="submit">Submit</button><br>
+            <br>
+            
+        </form>
+    </div>
+</section>
+<footer>
+<div class="center">
+    copyright &copy; Amlan Mohanty 2022. All rights reserved!
+</div>
+
+
+
+
+</footer>
+    </body>
+    </html>
