@@ -52,6 +52,7 @@ Face Recognition based Attendance Management System with an attendance dashboard
 ![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/3bcb178d-b336-4c02-a8ee-9a11cd9dbd25)
 
 - Fig.7: Attendance Dashboard in Power BI
-![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/fe98c1d9-27db-4d7a-ac4e-2bebd4761313)
+![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/532a47ce-fd9b-4b6a-9ef8-effd19b22dc2)
+
 
 
