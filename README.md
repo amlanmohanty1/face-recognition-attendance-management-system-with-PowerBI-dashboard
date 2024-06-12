@@ -41,7 +41,9 @@ Face Recognition based Attendance Management System with a Flask web application
 
 - Fig.6: Page showing the current day’s attendance
 
-  ![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/3bcb178d-b336-4c02-a8ee-9a11cd9dbd25)
+  ![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/b93b3afb-113d-406f-ad62-062b0fbaeb0e)
+
+
 
 - Fig.7: Attendance Dashboard in Power BI
 
