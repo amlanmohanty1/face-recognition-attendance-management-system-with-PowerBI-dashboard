@@ -1,38 +1,24 @@
 ## Face Recognition based Attendance Management System (FRAMS)
 Face Recognition based Attendance Management System with an attendance dashboard in Power BI
 
-### 1. Setting up the Environment
-- Created and activated a conda environment.
-- Installed necessary dependencies including OpenCV, dlib, face-recognition, sqlite, and Flask.
+### Technologies Used
+- **Programming Languages:** Python
+- **Libraries:** OpenCV, dlib, face-recognition
+- **Database:** SQLite
+- **Web Application:** Flask, HTML, CSS, JavaScript
+- **Data Visualization:** Power BI
 
-### 2. Face Detection
-- Utilized the Histogram of Oriented Gradients (HOG) method to detect faces in images and video streams.
-- Implemented face detection using the dlib library.
+### Methodology
+- **Environment Setup:** Created a conda environment and installed necessary dependencies including OpenCV, dlib, face-recognition, and Flask.
+- **Face Detection:** Converted images to black and white, then used HOG to detect faces by comparing image gradients.
+- **Face Embedding:** Used 128-dimensional vectors and the triplet loss function for distinguishing between faces.
+- **Face Recognition:** Utilized Euclidean distance with a threshold of 0.5 to compare the generated face encodings with the actual encodings of the training images to recognize the faces.
+- **Database Connection:** Stored attendance data in a SQLite database and exported it to CSV for Power BI integration.
+- **Web Application:** Developed a Flask-based web app for real-time attendance capturing and management.
+- **Power BI Dashboard:** Connected the attendance data to Power BI to create dashboards. Embedded Power BI reports into the web app for real-time insights.
 
-### 3. Facial Image Processing
-- Warped facial images to ensure eyes and lips were centered.
-- Located 68 facial landmarks to align the face.
 
-### 4. Face Embedding
-- Generated 128-dimensional feature vectors to uniquely represent faces using the face_recognition library.
-- Trained the model using the triplet loss function to distinguish between similar and dissimilar faces.
-
-### 5. Face Recognition
-- Utilized Euclidean distance with a threshold of 0.5 to compare the generated face encodings with the actual encodings of the training images to recognize the faces.
-
-### 6. Database Integration
-- Used the sqlite Python module to store attendance data.
-- Exported data to CSV for integration with Power BI.
-
-### 7. Web Application
-- Developed a web app using Flask for the backend and HTML, CSS, and JavaScript for the frontend.
-- Provided a user-friendly interface for attendance punching and viewing reports.
-
-### 8. Data Visualization
-- Connected the attendance data to Power BI to create interactive dashboards.
-- Embedded Power BI reports into the web app for real-time insights.
-
-### 9. Figure Appendix
+### Figure Appendix
 - Fig.1: Home page of FRAMS
   
   ![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/b5f28977-3781-4091-bd69-e2bdd392a548)
