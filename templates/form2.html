@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Student Attendance Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> 
+<style>
+    #page::before{
+        content: "";
+        position: absolute;
+       /* background: url("{{url_for('static',filename='bg1.webp')}}") no-repeat center center/cover; */
+        background-color: white;
+        height: 100%;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+</style> 
+<body>  
+    <section id="page">
+    <div class="container">
+        <br><br><br>
+        <h1 class="text-center" style="color:black"> <strong> Today's Attendance</strong></h1>
+        <br><br><br>
+        <h3 style="font-style:verdana;">Details of student present today:</h3>
+        <br><br><br>
+<table class="table table-bordered" >  
+    <thead>  
+        <td>Name</td>  
+        <td>Time</td>  
+        <td>Date</td>  
+    </thead>    
+    {% for row in rows %}  
+        <tr>  
+            <td>{{row["NAME"]}}</td>  
+            <td>{{row["Time"]}}</td>  
+            <td>{{row["Date"]}}</td>  
+         
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+
+<br><br>  
+<form action="/whole" method="post">
+
+    <button class="btn btn-primary">View Whole Database</button>
+    </form>  
+<Br>
+</Br>
+<form action="/dashboard" method="post">
+        <!--<a href="dashboard.html">-->
+        <button class="btn btn-primary ">View Attendance Dashboard
+        </button>
+</a>
+</form>
+        <Br>
+        </Br>
+<form action="/" method="GET">
+
+    <button class="btn btn-primary">Go back to home page</button>
+    </form> 
+</div>
+</section>
+</body>  
+</html>  

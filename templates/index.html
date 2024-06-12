@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Face Recognition Based Attendance Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <link rel="stylesheet" href="style1.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    /*contact section*/
+    #contact{
+        position: relative;
+    
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+       
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.5;
+        width: 100%;
+        height: 50%;
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+        background: url("{{url_for('static',filename='bg-test11.jpg')}}") no-repeat center center/cover;
+    }
+
+    #contact-box input,
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem; 
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+    #contact-box form{
+        width: 40%;
+    
+    }
+    #contact-box label{
+    font-size: 1.6rem;
+    font-family: 'Bree Serif',serif;
+    }
+    button{
+        border-radius: 5px;
+        border-color: black;
+        font-size: 1.3rem;
+        color: white;
+        font-family: 'Bree Serif',serif;
+        background-color: #0c5460 ;
+    
+    }
+    footer{
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+    
+    
+    
+    /* utility classes*/
+    
+    
+    .h-primary{
+        font-size: 3.5rem;
+        padding: 12px;
+        font-family: 'Bree Serif',serif;
+    
+    }
+    
+    .h-secondary{
+        font-size: 2.3rem;
+        padding: 12px;
+         font-family: 'Bree Serif',serif;
+    
+    }
+
+    .btn{
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: #0c5460;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .center{
+        text-align:center ;
+    }
+	*{
+    margin :0;
+    padding: 0;;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*css variables*/
+:root{
+    --navbar-height: 59px;
+
+}
+
+/* Navigation Bar*/
+#navbar {
+    display:flex ;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;  
+    opacity: 1.0;
+}
+/* Navigation Bar: Logo and Image*/
+
+
+#logo{
+    margin: 10px 34px;
+
+}
+#logo img{
+    height:59px;
+    margin: 3px 5px;
+
+}
+/*Navigation bar : list styling*/
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai',cursive;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color:white;
+   display: block;
+   padding: 3px 24px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color:white;
+    
+}
+/*Home Section*/
+
+#home{
+    display:flex;
+    flex-direction : column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content : center;
+    align-items : center;
+}
+
+  
+  </style>
+</head>
+</head>
+<body>
+<nav id="navbar">
+    <div id="logo">
+        <img src="{{url_for('static',filename='images/key-person2.png')}}" class="rounded-circle" alt="Icon">
+    </div>
+<ul>
+    <li class="item"><a href="/">Home</a></li>
+    <!--<li class="item"><a href="/contact">Contact Us </a></li> -->
+	    <li class="item" ><a href="/how">Admin Login</a></li>
+  
+
+</ul>
+</nav>
+ <div id="contact-box">
+    <form action="\name" method="POST">
+    <div class="form-group">
+	<br><br><br><br> 
+                <label for="name"> Name:</label>
+                <input type="text" name="name1" id="name" placeholder="Enter Your Name" required>
+				 <label for="name"> Registration Id:</label>
+                <input type="text" name="name2" id="name" placeholder="Enter Your Registration Number" required>
+            </div>
+			<br>
+             <button type="submit" name="submit">Submit</button><br>
+			 <br>
+			 <h3>Your webcam will open after pushing the submit button.</h3>
+			  <h3>Press space to capture your image and escape to close the camera</h3>
+	
+</form>
+</div>
+<footer>
+<div class="center">
+    copyright &copy; Amlan Mohanty 2022. All rights reserved!
+</div>
+</footer>
+</body>
+</html>
