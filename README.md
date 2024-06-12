@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Face Recognition based Attendance Management System (FRAMS)
 Face Recognition based Attendance Management System with a Flask web application and Power BI attendance dashboard.
 
@@ -49,4 +47,3 @@ Face Recognition based Attendance Management System with a Flask web application
 
   ![image](https://github.com/amlanmohanty1/face-recognition-attendance-management-system-with-PowerBI-dashboard/assets/72063042/532a47ce-fd9b-4b6a-9ef8-effd19b22dc2)
 
->>>>>>> 3bcc0027d2a2d2cdb79c182cff3e10bccf4d2ef5
