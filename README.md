@@ -1,5 +1,5 @@
 ## Face Recognition based Attendance Management System (FRAMS)
-Face Recognition based Attendance Management System with an attendance dashboard in Power BI
+Face Recognition based Attendance Management System with a Flask web application and Power BI attendance dashboard.
 
 ### Technologies Used
 - **Programming Languages:** Python
