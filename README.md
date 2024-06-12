@@ -50,8 +50,4 @@ Face Recognition based Attendance Management System with a Flask web application
 
 
 
-=======
-# Face-Based-Attendance
-This is facew based attendance system created by me.
-Run app.py
->>>>>>> 5377243 (Uploading files...)
+
