@@ -7,7 +7,7 @@ Face Recognition based Attendance Management System with a Flask web application
 - [Installation and Usage](#installation-and-usage)
 - [Technologies Used](#technologies-used)
 - [Methodology](#methodology)
-- [User Interface Demo](user-interface-demo)
+- [User Interface Demo](#user-interface-demo)
 - [License](#license)
 
 ### Features
