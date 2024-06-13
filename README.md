@@ -21,7 +21,7 @@ Face Recognition based Attendance Management System with a Flask web application
 - Attendance dashboards using Power BI
 
 ### Youtube Demo
-Here's the link of the [Youtube]() video demonstrating this project.
+Here's the link of the [Youtube](https://youtu.be/JKSU7lbZ3ZE) video demonstrating this project.
 
 
 ### Installation and Usage
